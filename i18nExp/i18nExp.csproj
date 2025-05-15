@@ -4,11 +4,38 @@
         <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.15"/>
         <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.15" PrivateAssets="all"/>
+        <PackageReference Include="Microsoft.Extensions.Localization" Version="9.0.5" />
+        <PackageReference Include="System.Globalization" Version="4.3.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Properties\App.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>App.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Properties\App.es-us.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>App.es-us.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Properties\App.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>App.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Properties\App.es-us.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>App.es-us.resx</DependentUpon>
+      </Compile>
     </ItemGroup>
 
 </Project>

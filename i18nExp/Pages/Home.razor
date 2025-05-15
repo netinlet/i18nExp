@@ -1,7 +1,55 @@
 ﻿@page "/"
+@using i18nExp.Components
 
-<PageTitle>Home</PageTitle>
+<PageTitle>Test i18n</PageTitle>
 
-<h1>Hello, world!</h1>
+<CultureSelector />
 
-Welcome to your new app.
+
+
+<h1>@L["Culture Example 1"]</h1>
+
+<ul>
+    <li><b>CurrentCulture</b>: @CultureInfo.CurrentCulture</li>
+    <li><b>CurrentUICulture</b>: @CultureInfo.CurrentUICulture</li>
+</ul>
+
+<h2>Rendered values</h2>
+
+<ul>
+    <li><b>Date</b>: @_theDate</li>
+    <li><b>Number</b>: @_theNumber.ToString("N2")</li>
+    <li><b>@L["Topping"]</b>: @_topping</li>
+</ul>
+
+<h2><code>&lt;input&gt;</code> elements that don't set a <code>type</code></h2>
+
+<p>
+    The following <code>&lt;input&gt;</code> elements use
+    <code>CultureInfo.CurrentCulture</code>.
+</p>
+
+<ul>
+    <li><label><b>Date:</b> <input @bind="_theDate" /></label></li>
+    <li><label><b>Number:</b> <input @bind="_theNumber" /></label></li>
+    <li><label><b>@L["Topping"]</b>:<input @bind="_topping" /></label></li>
+</ul>
+
+<h2><code>&lt;input&gt;</code> elements that set a <code>type</code></h2>
+
+<p>
+    The following <code>&lt;input&gt;</code> elements use
+    <code>CultureInfo.InvariantCulture</code>.
+</p>
+
+<ul>
+    <li><label><b>Date:</b> <input type="date" @bind="_theDate" /></label></li>
+    <li><label><b>Number:</b> <input type="number" @bind="_theNumber" /></label></li>
+    <li><label><b>@L["Topping"]</b>: <input type="text" @bind="_topping" /></label></li>
+</ul>
+
+@code {
+    private DateTime _theDate = DateTime.Now;
+    private double _theNumber = 1999.69;
+    private string _topping = "pepperoni";
+}
