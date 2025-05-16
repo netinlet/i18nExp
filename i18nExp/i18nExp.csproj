@@ -15,26 +15,42 @@
     </ItemGroup>
 
     <ItemGroup>
-      <EmbeddedResource Update="Properties\App.resx">
+      <EmbeddedResource Update="Properties\App.es-MX.resx">
+        <LastGenOutput>App.es-MX.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\App.resx">
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>App.Designer.cs</LastGenOutput>
       </EmbeddedResource>
-      <EmbeddedResource Update="Properties\App.es-us.resx">
+      <EmbeddedResource Update="Resources\App.en-US.resx">
         <Generator>ResXFileCodeGenerator</Generator>
-        <LastGenOutput>App.es-us.Designer.cs</LastGenOutput>
+        <LastGenOutput>App.en-US.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\App.es-MX.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>App.es-MX.Designer.cs</LastGenOutput>
       </EmbeddedResource>
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Update="Properties\App.Designer.cs">
+      <None Remove="Properties\launchSettings.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Resources\App.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>App.resx</DependentUpon>
       </Compile>
-      <Compile Update="Properties\App.es-us.Designer.cs">
+      <Compile Update="Resources\App.en-US.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
-        <DependentUpon>App.es-us.resx</DependentUpon>
+        <DependentUpon>App.en-US.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\App.es-MX.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>App.es-MX.resx</DependentUpon>
       </Compile>
     </ItemGroup>
 

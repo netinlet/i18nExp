@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace i18nExp.Properties {
+namespace i18nExp.Resources {
     using System;
     
     
@@ -21,14 +21,14 @@ namespace i18nExp.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class App {
+    internal class App_en_US {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal App() {
+        internal App_en_US() {
         }
         
         /// <summary>
@@ -38,7 +38,7 @@ namespace i18nExp.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("i18nExp.Properties.App", typeof(App).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("i18nExp.Resources.App.en-US", typeof(App_en_US).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -60,16 +60,7 @@ namespace i18nExp.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Culture Example 1.
-        /// </summary>
-        internal static string Culture_Example_1 {
-            get {
-                return ResourceManager.GetString("Culture Example 1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Topping.
+        ///   Looks up a localized string similar to ToppingEN.
         /// </summary>
         internal static string Topping {
             get {

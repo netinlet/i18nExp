@@ -11,15 +11,16 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
 // Add localization services
-builder.Services.AddLocalization(options => options.ResourcesPath = "Properties");
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 
 // Configure supported cultures
-var supportedCultures = new[] { "en-US", "es-US" };
-var defaultCulture = "en-US";
+// var supportedCultures = new[] { "en-US", "es-MX" };
+var defaultCulture = "es-MX";
+
+
 
 // Build the app
 var host = builder.Build();
-
 
 // Set the initial culture
 var jsRuntime = host.Services.GetRequiredService<IJSRuntime>();

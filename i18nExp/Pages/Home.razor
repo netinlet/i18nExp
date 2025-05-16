@@ -52,4 +52,13 @@
     private DateTime _theDate = DateTime.Now;
     private double _theNumber = 1999.69;
     private string _topping = "pepperoni";
+    
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Console.WriteLine("hello");
+        var nt = L["Topping"];
+        
+        Console.WriteLine("peace out");
+    }
 }
