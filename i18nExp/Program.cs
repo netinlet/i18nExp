@@ -23,12 +23,15 @@ var host = builder.Build();
 
 // Set the initial culture
 var jsRuntime = host.Services.GetRequiredService<IJSRuntime>();
-var preferredCulture = await jsRuntime.InvokeAsync<string>("localStorage.getItem", "preferredCulture");
+var preferredCulture = await jsRuntime.InvokeAsync<string>("blazorCulture.get");
+
+if (preferredCulture == null)
+{
+    await jsRuntime.InvokeVoidAsync("blazorCulture.set", defaultCulture);
+}
 
 // Use the preferred culture if available, otherwise use the default
-var culture = preferredCulture != null && supportedCultures.Contains(preferredCulture) 
-    ? preferredCulture 
-    : defaultCulture;
+var culture = preferredCulture ?? defaultCulture;
 
 CultureInfo.DefaultThreadCurrentCulture = new CultureInfo(culture);
 CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo(culture);
