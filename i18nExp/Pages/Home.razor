@@ -3,7 +3,7 @@
 
 <PageTitle>Test i18n</PageTitle>
 
-<CultureSelector />
+<CultureSelector/>
 
 
 
@@ -30,9 +30,9 @@
 </p>
 
 <ul>
-    <li><label><b>Date:</b> <input @bind="_theDate" /></label></li>
-    <li><label><b>Number:</b> <input @bind="_theNumber" /></label></li>
-    <li><label><b>@L["Topping"]</b>:<input @bind="_topping" /></label></li>
+    <li><label><b>Date:</b> <input @bind="_theDate"/></label></li>
+    <li><label><b>Number:</b> <input @bind="_theNumber"/></label></li>
+    <li><label><b>@L["Topping"]</b>:<input @bind="_topping"/></label></li>
 </ul>
 
 <h2><code>&lt;input&gt;</code> elements that set a <code>type</code></h2>
@@ -43,22 +43,19 @@
 </p>
 
 <ul>
-    <li><label><b>Date:</b> <input type="date" @bind="_theDate" /></label></li>
-    <li><label><b>Number:</b> <input type="number" @bind="_theNumber" /></label></li>
-    <li><label><b>@L["Topping"]</b>: <input type="text" @bind="_topping" /></label></li>
+    <li><label><b>Date:</b> <input type="date" @bind="_theDate"/></label></li>
+    <li><label><b>Number:</b> <input type="number" @bind="_theNumber"/></label></li>
+    <li><label><b>@L["Topping"]</b>: <input type="text" @bind="_topping"/></label></li>
 </ul>
 
 @code {
     private DateTime _theDate = DateTime.Now;
     private double _theNumber = 1999.69;
     private string _topping = "pepperoni";
-    
+
     protected override void OnInitialized()
     {
-        base.OnInitialized();
-        Console.WriteLine("hello");
-        var nt = L["Topping"];
-        
-        Console.WriteLine("peace out");
+        Console.WriteLine($"Current culture: {CultureInfo.CurrentCulture.Name}");
+        Console.WriteLine($"Topping translation: {L["Topping"]}");
     }
 }

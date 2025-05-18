@@ -15,9 +15,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <EmbeddedResource Update="Properties\App.es-MX.resx">
-        <LastGenOutput>App.es-MX.Designer.cs</LastGenOutput>
-      </EmbeddedResource>
       <EmbeddedResource Update="Resources\App.resx">
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>App.Designer.cs</LastGenOutput>
