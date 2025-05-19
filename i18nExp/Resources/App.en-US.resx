@@ -21,4 +21,7 @@
     <data name="Topping" xml:space="preserve">
         <value>ToppingEN</value>
     </data>
+    <data name="Culture Example 1" xml:space="preserve">
+        <value>Culture Example 1</value>
+    </data>
 </root>

@@ -60,6 +60,15 @@ namespace i18nExp.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Culture Example 1.
+        /// </summary>
+        internal static string Culture_Example_1 {
+            get {
+                return ResourceManager.GetString("Culture Example 1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ToppingEN.
         /// </summary>
         internal static string Topping {
